@@ -4,6 +4,8 @@
 
 <meta charset="UTF-8">
 
+<link rel="icon" type="image/png" href="jms-logo.png">
+
 <!-- Google Search Console Verification -->
 <meta name="google-site-verification" content="h9Z473Kx3GkjT2jd9lC7gbGBAu_9ySrjUHI6BiB_deE">
 
@@ -13,16 +15,11 @@
      PRIMARY SEO
      ========================================================= -->
 
-<title>JMS Construction & Company | Construction & Civil Works in Sindh</title>
+<title>JMS Construction & Company | Karachi & Sindh</title>
 
 <meta
   name="description"
   content="JMS Construction & Company provides building construction, civil works, road and infrastructure works, BOQ and quantity estimation, tender support, renovation and construction consultancy services in Karachi and across Sindh, Pakistan."
->
-
-<meta
-  name="keywords"
-  content="construction company Karachi, construction company Sindh, civil works Karachi, civil construction Sindh, building construction Karachi, road construction Sindh, BOQ estimation Karachi, quantity estimation, tender support, construction consultancy Sindh"
 >
 
 <meta name="robots" content="index, follow">
@@ -48,7 +45,7 @@
 
 <meta
   property="og:title"
-  content="JMS Construction & Company | Construction & Civil Works in Sindh"
+  content="JMS Construction & Company | Karachi & Sindh"
 >
 
 <meta
@@ -84,7 +81,7 @@
 
 <meta
   name="twitter:title"
-  content="JMS Construction & Company | Construction & Civil Works in Sindh"
+  content="JMS Construction & Company | Karachi & Sindh"
 >
 
 <meta
@@ -117,6 +114,20 @@
       "url": "https://jamaftabahmedlakhan.github.io/JMSCONSTRUCTION-COMPANY/",
       "name": "JMS Construction & Company",
       "description": "Construction and civil works company providing building construction, infrastructure, BOQ, estimation, tender support, renovation and construction consultancy services in Karachi and across Sindh, Pakistan.",
+      "inLanguage": "en-PK"
+    },
+
+    {
+      "@type": "WebPage",
+      "@id": "https://jamaftabahmedlakhan.github.io/JMSCONSTRUCTION-COMPANY/#webpage",
+      "url": "https://jamaftabahmedlakhan.github.io/JMSCONSTRUCTION-COMPANY/",
+      "name": "JMS Construction & Company | Karachi & Sindh",
+      "isPartOf": {
+        "@id": "https://jamaftabahmedlakhan.github.io/JMSCONSTRUCTION-COMPANY/#website"
+      },
+      "about": {
+        "@id": "https://jamaftabahmedlakhan.github.io/JMSCONSTRUCTION-COMPANY/#business"
+      },
       "inLanguage": "en-PK"
     },
 
@@ -682,6 +693,12 @@ section {
 .service-link:hover {
   color: var(--gold);
   transform: translateX(4px);
+}
+
+.service-link:focus-visible {
+  outline: 2px solid var(--gold);
+  outline-offset: 4px;
+  border-radius: 3px;
 }
 
 /* =========================================================
@@ -1910,14 +1927,14 @@ with organized execution, quality workmanship and
 professional project coordination.
 </p>
 
-<button
-  type="button"
+<a
+  href="#contact"
   class="service-link project-service-link"
   data-project="Building Construction">
 
 Discuss Your Project →
 
-</button>
+</a>
 
 </div>
 
@@ -1933,14 +1950,14 @@ earthwork, drainage and other essential civil construction
 works.
 </p>
 
-<button
-  type="button"
+<a
+  href="#contact"
   class="service-link project-service-link"
   data-project="Civil & Structural Works">
 
 Discuss Your Project →
 
-</button>
+</a>
 
 </div>
 
@@ -1956,14 +1973,14 @@ estimation, cost estimation and quantity documentation
 for construction projects.
 </p>
 
-<button
-  type="button"
+<a
+  href="#contact"
   class="service-link project-service-link"
   data-project="BOQ & Quantity Estimation">
 
 Request Estimation →
 
-</button>
+</a>
 
 </div>
 
@@ -1979,14 +1996,14 @@ and supporting documentation to help organize
 construction procurement.
 </p>
 
-<button
-  type="button"
+<a
+  href="#contact"
   class="service-link project-service-link"
   data-project="Tendering & Documentation">
 
 Get Tender Support →
 
-</button>
+</a>
 
 </div>
 
@@ -2002,14 +2019,14 @@ development and supporting infrastructure construction
 for development projects.
 </p>
 
-<button
-  type="button"
+<a
+  href="#contact"
   class="service-link project-service-link"
   data-project="Roads & Infrastructure">
 
 Discuss Infrastructure →
 
-</button>
+</a>
 
 </div>
 
@@ -2025,14 +2042,14 @@ maintenance and improvement works designed to restore
 and enhance existing spaces.
 </p>
 
-<button
-  type="button"
+<a
+  href="#contact"
   class="service-link project-service-link"
   data-project="Renovation & Maintenance">
 
 Plan Renovation →
 
-</button>
+</a>
 
 </div>
 
@@ -2048,14 +2065,14 @@ documentation and execution support to help keep
 construction activities organized.
 </p>
 
-<button
-  type="button"
+<a
+  href="#contact"
   class="service-link project-service-link"
   data-project="Project Management">
 
 Discuss Management →
 
-</button>
+</a>
 
 </div>
 
@@ -2071,14 +2088,14 @@ quantities, documentation, tender preparation,
 coordination and project support.
 </p>
 
-<button
-  type="button"
+<a
+  href="#contact"
   class="service-link project-service-link"
   data-project="Construction Consultancy">
 
 Book Consultation →
 
-</button>
+</a>
 
 </div>
 
@@ -3304,7 +3321,9 @@ serviceLinks.forEach(link => {
 
   link.addEventListener(
     "click",
-    function() {
+    function(event) {
+
+      event.preventDefault();
 
       const service =
         this.dataset.project;
